@@ -11,5 +11,5 @@ dependencies = [
     "numpy",
     "seaborn",
     "matplotlib"
-    "pandas",
+    "pandas"
 ]
