@@ -1,3 +1,4 @@
-# from .NewFunction import new_function  (add for every new function)
+# from .NewFile import new_function  (add for every new function)
 
-from .CovPCA import cov_pca
+from .CovPCA import CovPCA
+from .dopi import Dopi_Generator

@@ -9,5 +9,7 @@ description = "Wandrille Buchy's personnal functions"
 requires-python = ">=3.9"
 dependencies = [
     "numpy",
+    "seaborn",
+    "matplotlib"
     "pandas",
 ]

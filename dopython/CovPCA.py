@@ -3,13 +3,12 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 from types import SimpleNamespace
-from numpy import linalg
 from warnings import warn
 
 
 def CovPCA(data, CovMat, ncomp = 2, values = True):
 
-    eigenval, eigenvect = linalg.eigh(CovMat)
+    eigenval, eigenvect = np.linalg.eigh(CovMat)
     
     idx = np.argsort(eigenval)[::-1]
     eigenval = eigenval[idx]
