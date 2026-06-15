@@ -20,6 +20,11 @@ Use this function when your covariance matrix as to be specified (dCov, ...).
 
 def CovPCA(data, CovMat, ncomp = 2, values = True):
 
+
+    CovMat = np.array(CovMat)
+    data = np.array(data)
+    
+    
     eigenval, eigenvect = np.linalg.eigh(CovMat)
     
     idx = np.argsort(eigenval)[::-1]
@@ -36,9 +41,9 @@ def CovPCA(data, CovMat, ncomp = 2, values = True):
     proj = np.dot(data, base)
 
     if (values == True):
-        return SimpleNamespace(projection = proj, pct_info = info, projection_base = base, eigenvalues = neigenval)
+        return SimpleNamespace(projection = proj, pct_info = info, projection_base = base, eigenvalues = neigenval, ProjMat = ProjMat)
 
-    if (values == False and ncomp == 2):
+    elif (values == False and ncomp == 2):
         
         axe1_info = info[0]
         axe2_info = info[1]
