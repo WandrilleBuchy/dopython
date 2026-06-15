@@ -33,7 +33,7 @@ def CovPCA(data, CovMat, ncomp = 2, values = True):
 
     ProjMat = np.dot(base, base.T)
 
-    proj = np.dot(data, ProjMat)
+    proj = np.dot(data, base)
 
     if (values == True):
         return SimpleNamespace(projection = proj, pct_info = info, projection_base = base, eigenvalues = neigenval)
