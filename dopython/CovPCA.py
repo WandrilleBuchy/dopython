@@ -44,8 +44,8 @@ def CovPCA(data, CovMat, ncomp = 2, values = True):
         axe2_info = info[1]
     
         fig, axes = plt.subplots(figsize=(10, 10))
-        sns.scatterplot(x = proj[0,:],
-                        y = proj[1,:])
+        sns.scatterplot(x = proj[:,0],
+                        y = proj[:,1])
         axes.set_xlabel(f"1st component | {axe1_info} %")
         axes.set_ylabel(f"2nd component | {axe2_info} %")
 
